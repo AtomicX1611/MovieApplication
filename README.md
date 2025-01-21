@@ -2,7 +2,7 @@ Movie Application (Java MVVM)
 Overview
 The Movie Application is a Java-based desktop application designed to provide users with an intuitive interface to search, view, and manage their movie collection. Built using the Model-View-ViewModel (MVVM) architecture, the app allows users to explore movie details, save favorites, and apply sorting or filtering options.
 
-Technologies Used
+Technologies Used 
 
 MVVM Architecture: Design pattern separating UI logic (View), business logic (ViewModel), and data (Model).
 Gradle: For project dependency management and build automation.
