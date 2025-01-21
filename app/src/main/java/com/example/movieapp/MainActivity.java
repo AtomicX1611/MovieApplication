@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import com.example.movieapp.databinding.ActivityMainBinding;
@@ -21,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
     private SwipeRefreshLayout swipeRefreshLayout;
     private ArrayList<Movie> movies;
     private RecyclerView recyclerView;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class); //provides and instance of the class.
+        viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class); //provides an instance of the class.
         getPopularMovies();
 
         swipeRefreshLayout = mainBinding.swipe;

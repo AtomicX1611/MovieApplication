@@ -1,17 +1,12 @@
 package com.example.movieapp.module1;
 
-import static android.os.Build.VERSION_CODES.R;
 
 import android.app.Application;
 import android.widget.Toast;
 
 import androidx.lifecycle.MutableLiveData;
-
-
 import com.example.movieapp.module2Service.MovieAPIService;
 import com.example.movieapp.module2Service.RetrofitInstance;
-import com.google.android.material.internal.ManufacturerUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,12 +25,11 @@ public class MovieRepository {
     public MovieRepository(Application application) {
         this.application = application;
     }
-    //Changed in main
 
     public MutableLiveData<List<Movie>> getMutableLiveData(){
         MovieAPIService movieAPIService = RetrofitInstance.getService();
         Call<Result> call = movieAPIService.getAllPopularMovies(application.
-                getApplicationContext().getString(R.string.api_key));
+                getApplicationContext().getString(com.example.movieapp.R.string.api_key));
 
         call.enqueue(new Callback<Result>() {
             @Override
